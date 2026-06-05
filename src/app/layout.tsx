@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,6 +75,8 @@ export default function RootLayout({
     >
       <body className="bg-slate-950 text-slate-100 antialiased selection:bg-violet-500/30 selection:text-white min-h-screen">
         {children}
+
+        <Analytics />
       </body>
     </html>
   );
